@@ -1,0 +1,33 @@
+.tabs {
+  .tabs-panel {
+    overflow: hidden;
+
+    .tabs-panel-body {
+      padding: 0px;
+
+      .tabs-row {
+        display: flex;
+        margin: 0px;
+
+        .s-button-skinny {
+          flex: 0 1 auto;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 15px 30px;
+
+          &:hover {
+            background-color: rgba($brand-info, 0.3);
+            cursor: pointer;
+          }
+
+          &.active {
+            color: white;
+            background-color: $brand-primary;
+          }
+        }
+      }
+    }
+  }
+}

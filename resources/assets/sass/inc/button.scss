@@ -1,0 +1,138 @@
+.s-button:focus,
+.s-button:hover {
+  border: none;
+  outline: 0 !important;
+  box-shadow: none;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(51, 105, 231, 0.4);
+  color: #fff;
+}
+
+.s-button-flat:focus,
+.s-button-flat:hover {
+  outline: 0 !important;
+  text-decoration: none;
+}
+
+.s-button-blue {
+  padding: 0em 4em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  border: none;
+  box-sizing: border-box;
+  position: relative;
+  transition: background 0.2s, box-shadow 0.2s;
+  color: #fff;
+  background-image: linear-gradient(284deg, #3369e7, #00aeff);
+}
+
+.s-button-red {
+  padding: 0em 4em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  border: none;
+  box-sizing: border-box;
+  position: relative;
+  transition: background 0.2s, box-shadow 0.2s;
+  color: #fff;
+  background-image: linear-gradient(112deg, #ff4f81, #ff6c5f);
+}
+
+.s-button-green {
+  padding: 0em 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  border: none;
+  box-sizing: border-box;
+  position: relative;
+  transition: background 0.2s, box-shadow 0.2s;
+  color: #fff;
+  background-image: linear-gradient(284deg, #1cc7d0, #2dde98);
+}
+
+.s-button-blue-flat {
+  border: none;
+  padding: 0em 4em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 40px;
+  box-sizing: border-box;
+  position: relative;
+  color: #7885bf;
+  background-color: rgba(137, 149, 199, 0.05);
+  box-shadow: inset 0 0 0 2px rgba(137, 149, 199, 0.1);
+  transition: background 0.1s ease-in-out 0s;
+}
+.s-button-blue-flat:hover,
+.s-button-blue-flat:focus {
+  background-color: rgba(137, 149, 199, 0.2);
+  color: #7885bf;
+}
+
+.s-button-skinny {
+  line-height: initial;
+  font-size: 14px;
+  padding: 0.6em 2em;
+}
+
+.s-button-fat {
+  padding: 1em 4em;
+}
+
+.back-button {
+  color: #838ca2;
+  vertical-align: middle;
+  :hover,
+  :focus {
+    color: #838ca2;
+  }
+}
+
+.s-button-more {
+  display: inline-flex;
+  padding: 1em 2em;
+  width: 200px;
+  justify-content: center;
+  border-radius: 50px;
+  //border: 3px solid #8994c6;
+  color: #626a8f;
+  font-weight: 600;
+  box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07),
+    0 2px 9px 0 rgba(62, 57, 107, 0.06);
+  background: #fff;
+  align-items: center;
+  cursor: pointer;
+
+  i {
+    margin-left: 0.5em;
+    transition: 0.2s ease;
+  }
+}
+
+.s-button-more:hover,
+.s-button-more:focus {
+  color: #626a8f;
+
+  i {
+    margin-left: 1em;
+    transition: 0.2s ease;
+  }
+}

@@ -1,0 +1,16 @@
+.repository {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1em;
+  padding: 1em;
+  border: 2px dashed #eef0f6;
+}
+
+.toggle-patches {
+  cursor: pointer;
+}
+
+.repository-row {
+  cursor: pointer;
+}

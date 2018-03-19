@@ -1,0 +1,65 @@
+.plans {
+  display: flex;
+  justify-content: center;
+}
+
+.plan {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 16px 32px 0 rgba(62, 57, 107, 0.2);
+  padding: 2em 3em;
+  margin: 0 2em;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.plan .monthly {
+  font-weight: 600;
+  font-size: 3em;
+  position: relative;
+  font-style: italic;
+}
+
+.plan .cost {
+  height: 5em;
+}
+
+.plan .cost .dollar {
+  position: absolute;
+  font-size: 54%;
+  top: 10px;
+  left: -20px;
+}
+
+.plan .cost .period {
+  position: absolute;
+  font-size: 37%;
+  bottom: 0px;
+  right: -57px;
+}
+
+.plan .name {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.plans hr {
+  display: block;
+  height: 1px;
+  width: 100%;
+  border: 0;
+  border-top: 2px solid #f9f9f9;
+  margin: 1em 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .plans {
+    flex-direction: column;
+  }
+}

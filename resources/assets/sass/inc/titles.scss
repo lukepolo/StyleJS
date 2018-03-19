@@ -1,0 +1,31 @@
+.dotted-title {
+  text-align: center;
+  overflow: hidden;
+  font-weight: 600;
+  margin: 1em;
+  clear: both;
+}
+.dotted-title span {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+  font-size: 15px;
+}
+.dotted-title span:after,
+.dotted-title span:before {
+  content: "";
+  display: block;
+  width: 1000px;
+  position: absolute;
+  top: 0.73em;
+  border-top: 2px solid #f9f9f9;
+}
+.dotted-title span:before {
+  right: 100%;
+}
+.dotted-title span:after {
+  left: 100%;
+}
+.dotted-title .small {
+  font-size: 10px;
+}

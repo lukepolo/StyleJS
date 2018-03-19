@@ -1,0 +1,148 @@
+.panel {
+  border: none;
+  box-shadow: 0 2px 4px rgba(5, 15, 44, 0.1);
+}
+
+.dashboard-content .panel .panel-heading {
+  background-color: rgba(247, 247, 255, 0.2);
+  border-bottom: 1px solid #f7f7ff;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  font-weight: 900;
+  color: #fff;
+}
+
+.navbar-default {
+  background-color: #1e2338;
+  border-color: #4d5267;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+.panel-default > .panel-heading {
+  border-color: #f3f3f3;
+}
+
+// forms
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #b1b1dc;
+}
+
+.form-control {
+  box-shadow: none;
+  border: 2px solid #e0e2eb;
+  font-family: $font-family-base;
+  height: 51px;
+}
+
+// messages
+.alert.alert-warning {
+  border: none;
+  border-left: 4px solid #ffc168;
+  margin-bottom: 15px;
+  background-color: rgba(255, 193, 104, 0.1);
+}
+
+.alert.alert-success {
+  border: none;
+  border-left: 4px solid #2dde98;
+  margin-bottom: 15px;
+  background-color: rgba(45, 222, 152, 0.1);
+}
+
+.alert.alert-danger {
+  border: none;
+  border-left: 4px solid #ff4f81;
+  margin-bottom: 15px;
+  background-color: rgba(255, 79, 129, 0.1);
+}
+
+.alert.alert-info {
+  border: none;
+  border-left: 4px solid #00aeff;
+  margin-bottom: 15px;
+  background-color: rgba(0, 174, 255, 0.1);
+}
+
+// table
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  border-top: 1px solid #dedef8;
+  vertical-align: middle;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f8faff;
+}
+
+.table-patches > tbody > tr:nth-of-type(3n + 0) {
+  background-color: #f8faff;
+}
+
+.table > thead > tr > th {
+  border-bottom: 2px solid #dedef8;
+}
+
+// checkbox
+.radio,
+.checkbox {
+  margin-top: 25px;
+  border: 2px solid #e0e2eb;
+  padding: 0em;
+  border-radius: 4px;
+  margin-bottom: 1em;
+}
+
+.radio label,
+.checkbox label {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 1em;
+  background: #fff;
+}
+
+select {
+  cursor: pointer;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  font-size: 26px;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: inherit;
+}
+
+// buttons
+.btn-default {
+  color: #5b638b;
+  border-color: #dedef8;
+}
+
+.form-group {
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
