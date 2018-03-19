@@ -24,4 +24,5 @@ php artisan db:seed
 
 * tests
 * broadcasting events
+* convert public facing to vue 
 * Varie is still in early development and things may change - [Varie.io](https://varie.io)
