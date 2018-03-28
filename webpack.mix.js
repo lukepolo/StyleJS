@@ -16,7 +16,14 @@ if (process.env.NODE_ENV !== "development") {
 console.info(path.join(__dirname, "resources/assets/js/app"));
 mix
   .typeScript("resources/assets/js/app/app.ts", "js")
-  .extract(["vue", "vue-router", "vuex"])
+  .extract([
+    "moment-timezone",
+    "portal-vue",
+    "vue",
+    "vue-clipboard2",
+    "vue-router",
+    "vuex"
+  ])
   .sass("resources/assets/sass/app.scss", "css")
   .setPublicPath("public")
   .browserSync({
