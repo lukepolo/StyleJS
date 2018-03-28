@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.12 on 2018-03-17 00:44:54.
+ * Generated for Laravel 5.6.12 on 2018-03-28 15:56:57.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -6407,7 +6407,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function size($queue = null)
         {
-            return \Illuminate\Queue\SyncQueue::size($queue);
+            return \Illuminate\Queue\BeanstalkdQueue::size($queue);
         }
         
         /**
@@ -6417,12 +6417,11 @@ namespace Illuminate\Support\Facades {
          * @param mixed $data
          * @param string $queue
          * @return mixed 
-         * @throws \Exception|\Throwable
          * @static 
          */ 
         public static function push($job, $data = '', $queue = null)
         {
-            return \Illuminate\Queue\SyncQueue::push($job, $data, $queue);
+            return \Illuminate\Queue\BeanstalkdQueue::push($job, $data, $queue);
         }
         
         /**
@@ -6436,7 +6435,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function pushRaw($payload, $queue = null, $options = array())
         {
-            return \Illuminate\Queue\SyncQueue::pushRaw($payload, $queue, $options);
+            return \Illuminate\Queue\BeanstalkdQueue::pushRaw($payload, $queue, $options);
         }
         
         /**
@@ -6451,7 +6450,7 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function later($delay, $job, $data = '', $queue = null)
         {
-            return \Illuminate\Queue\SyncQueue::later($delay, $job, $data, $queue);
+            return \Illuminate\Queue\BeanstalkdQueue::later($delay, $job, $data, $queue);
         }
         
         /**
@@ -6463,7 +6462,43 @@ namespace Illuminate\Support\Facades {
          */ 
         public static function pop($queue = null)
         {
-            return \Illuminate\Queue\SyncQueue::pop($queue);
+            return \Illuminate\Queue\BeanstalkdQueue::pop($queue);
+        }
+        
+        /**
+         * Delete a message from the Beanstalk queue.
+         *
+         * @param string $queue
+         * @param string $id
+         * @return void 
+         * @static 
+         */ 
+        public static function deleteMessage($queue, $id)
+        {
+            \Illuminate\Queue\BeanstalkdQueue::deleteMessage($queue, $id);
+        }
+        
+        /**
+         * Get the queue or return the default.
+         *
+         * @param string|null $queue
+         * @return string 
+         * @static 
+         */ 
+        public static function getQueue($queue)
+        {
+            return \Illuminate\Queue\BeanstalkdQueue::getQueue($queue);
+        }
+        
+        /**
+         * Get the underlying Pheanstalk instance.
+         *
+         * @return \Pheanstalk\Pheanstalk 
+         * @static 
+         */ 
+        public static function getPheanstalk()
+        {
+            return \Illuminate\Queue\BeanstalkdQueue::getPheanstalk();
         }
         
         /**
@@ -6478,7 +6513,7 @@ namespace Illuminate\Support\Facades {
         public static function pushOn($queue, $job, $data = '')
         {
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\SyncQueue::pushOn($queue, $job, $data);
+            return \Illuminate\Queue\BeanstalkdQueue::pushOn($queue, $job, $data);
         }
         
         /**
@@ -6494,7 +6529,7 @@ namespace Illuminate\Support\Facades {
         public static function laterOn($queue, $delay, $job, $data = '')
         {
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\SyncQueue::laterOn($queue, $delay, $job, $data);
+            return \Illuminate\Queue\BeanstalkdQueue::laterOn($queue, $delay, $job, $data);
         }
         
         /**
@@ -6509,7 +6544,7 @@ namespace Illuminate\Support\Facades {
         public static function bulk($jobs, $data = '', $queue = null)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\SyncQueue::bulk($jobs, $data, $queue);
+            return \Illuminate\Queue\BeanstalkdQueue::bulk($jobs, $data, $queue);
         }
         
         /**
@@ -6522,7 +6557,7 @@ namespace Illuminate\Support\Facades {
         public static function getJobExpiration($job)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\SyncQueue::getJobExpiration($job);
+            return \Illuminate\Queue\BeanstalkdQueue::getJobExpiration($job);
         }
         
         /**
@@ -6534,7 +6569,7 @@ namespace Illuminate\Support\Facades {
         public static function getConnectionName()
         {
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\SyncQueue::getConnectionName();
+            return \Illuminate\Queue\BeanstalkdQueue::getConnectionName();
         }
         
         /**
@@ -6547,7 +6582,7 @@ namespace Illuminate\Support\Facades {
         public static function setConnectionName($name)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-            return \Illuminate\Queue\SyncQueue::setConnectionName($name);
+            return \Illuminate\Queue\BeanstalkdQueue::setConnectionName($name);
         }
         
         /**
@@ -6560,7 +6595,7 @@ namespace Illuminate\Support\Facades {
         public static function setContainer($container)
         {
             //Method inherited from \Illuminate\Queue\Queue            
-            \Illuminate\Queue\SyncQueue::setContainer($container);
+            \Illuminate\Queue\BeanstalkdQueue::setContainer($container);
         }
          
     }
@@ -12443,14 +12478,6 @@ namespace Illuminate\Support\Facades {
  
 }
 
-namespace Laravel\Horizon { 
-
-    class Horizon {
-         
-    }
- 
-}
-
 namespace Laravel\Socialite\Facades { 
 
     class Socialite {
@@ -12677,6 +12704,14 @@ namespace Vinkla\Hashids\Facades {
             //Method inherited from \GrahamCampbell\Manager\AbstractManager            
             return \Vinkla\Hashids\HashidsManager::getConfig();
         }
+         
+    }
+ 
+}
+
+namespace Laravel\Horizon { 
+
+    class Horizon {
          
     }
  
@@ -14921,11 +14956,11 @@ namespace  {
 
     class View extends \Illuminate\Support\Facades\View {}
 
-    class Horizon extends \Laravel\Horizon\Horizon {}
-
     class Socialite extends \Laravel\Socialite\Facades\Socialite {}
 
     class Hashids extends \Vinkla\Hashids\Facades\Hashids {}
+
+    class Horizon extends \Laravel\Horizon\Horizon {}
  
 }
 
