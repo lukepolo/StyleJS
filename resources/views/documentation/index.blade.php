@@ -53,9 +53,9 @@
                             checks or other processes that your devs could skip regardless of what you choose. They can't skip this!
                         </p>
 
-                        <h3>6. Support</h3>
+                        <h3>5. Support</h3>
                         <p>
-                           Checkout our repo - TODO
+                           Checkout our repository on <a href="https://github.com/lukepolo/stylejs">GitHub</a>
                         </p>
                     </div>
                 </div>
