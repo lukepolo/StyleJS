@@ -3,6 +3,9 @@
     <head>
         @include('layouts.head')
 
+        @yield('head-title')
+        @include('layouts.social')
+
         @stack('styles')
 
         <!-- Styles -->

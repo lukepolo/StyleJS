@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
+        <title>{{ config('app.name') }}</title>
+
         @include('layouts.head')
 
         <script>
@@ -21,10 +23,6 @@
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-
-        {{-- TODO should somehow move these into the app --}}
-        @include('layouts.core.errors')
-        @include('layouts.core.success')
 
         @yield('content')
 
