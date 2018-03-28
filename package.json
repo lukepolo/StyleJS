@@ -33,7 +33,7 @@
     "pretty-quick": "^1.4.1",
     "ts-loader": "^3.5.0",
     "typescript": "^2.7.2",
-    "varie": "~0.0.42",
+    "varie": "~0.0.43",
     "vue-loader": "^14.1.1",
     "vue-template-compiler": "^2.5.16"
   }
